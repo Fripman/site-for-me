@@ -12,6 +12,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     margin: 0;
+    background-color: #332;
 }
 
 header {
@@ -20,27 +21,69 @@ header {
     padding: 20px;
 }
 
-nav ul {
-
+header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
+    
+}
+
+header nav ul{
     display: flex;
     justify-content: space-between;
 }
 
-nav li {
+header li {
     margin: 0 10px;
 }
 
-nav a {
+header nav a {
     color: #fff;
     text-decoration: none;
+    height: 4vh;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: auto;
+    height: 10vh;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
+    text-align: left;
+    padding-left: 100px;
+
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+footer nav li {
+    margin: 0 10px;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#twitch-embed {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.stream {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
