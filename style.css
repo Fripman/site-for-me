@@ -74,7 +74,7 @@ footer nav li {
 footer nav a {
     color: #fff;
     text-decoration: none;
-    list-style-image: url("share.png");
+    list-style-image: url("/share.svg");
 }
 
 #twitch-embed {
