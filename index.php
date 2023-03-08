@@ -17,10 +17,10 @@
 
     <div class="stream">
 
-        <iframe src="https://player.twitch.tv/?channel=fripman&parent=www.example.com" frameborder="0"
+        <iframe src="https://player.twitch.tv/?channel=fripman&parent=fripman14.freeboxos.fr" frameborder="0"
             allowfullscreen="true" scrolling="no" height="800" width="80%"></iframe>
 
-        <iframe id="chat_embed" src="https://www.twitch.tv/embed/fripman/chat?parent=www.example.com" height="800"
+        <iframe id="chat_embed" src="https://www.twitch.tv/embed/fripman/chat?parent=fripman14.freeboxos.fr" height="800"
             width="20%"></iframe>
     </div>
     <?php
