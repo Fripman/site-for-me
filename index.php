@@ -22,8 +22,7 @@
     <div class="stream">
 
         <div class="stream_video">
-            <div id='twitch-embed'></div>
-            <iframe src='https://player.twitch.tv/?channel=fripman&parent=www.fripman.fr\' frameborder='0' allowfullscreen='true' scrolling='no' height='100%' width='100%'></iframe>
+        <iframe src="https://player.twitch.tv/?channel=fripman&parent=www.fripman.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="100%" width="100%"></iframe>
         </div>
 
         <div class="stream_chat">
