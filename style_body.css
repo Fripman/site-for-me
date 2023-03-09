@@ -1,0 +1,37 @@
+@media only screen and (min-width: 1000px) {
+  .stream {
+    display: table;
+    width: 100%;
+    height: 56.25vw;
+    max-height: 80vh;
+    margin: 0;
+    justify-content: top;
+    align-items: top;
+    flex-direction: row;
+  }
+
+  .stream_video {
+    display: table-cell;
+  }
+
+  .stream_chat {
+    display: table-cell;
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .stream {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stream_video {
+    height: 56.25vw;
+  }
+
+  .stream_chat {
+    height: 56.25vw;
+  }
+}

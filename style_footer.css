@@ -1,0 +1,21 @@
+footer {
+  background-color: #2b2d42;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  padding-left: 100px;
+}
+
+footer nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav li {
+  margin: 0 10px;
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+}
