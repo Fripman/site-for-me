@@ -27,7 +27,7 @@
         </div>
 
         <div class="stream_chat">
-            <iframe id="chat_embed" src="https://www.twitch.tv/embed/fripman/chat?parent=www.example.com" height="100%" width="100%">
+            <iframe id="chat_embed" src="https://www.twitch.tv/embed/fripman/chat?parent=www.fripman.fr" height="100%" width="100%">
             </iframe>
         </div>
 
