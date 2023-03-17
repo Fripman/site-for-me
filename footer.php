@@ -7,13 +7,4 @@
       <li><a href="https://www.instagram.com/valentin.richard30/?next=%2F">Instagram</a></li>
     </ul>
   </nav>
-  <nav>
-    <ul>
-      <li><a href="">Discord</a></li>
-      <li><a href="">YouTube</a></li>
-      <li><a href="">Twitch</a></li>
-      <li><a href="">Instagram</a></li>
-    </ul>
-  </nav>
-  
 </footer>
