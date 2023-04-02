@@ -1,12 +1,15 @@
-body{
+body {
   background-color: black;
 }
- 
+
 
 
 @media only screen and (min-width: 1000px) {
   .stream {
-    display: table;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 56.25vw;
     max-height: 80vh;
@@ -17,12 +20,13 @@ body{
   }
 
   .stream_video {
-    display: table-cell;
+    width: 80%;
+    height: 100%;
   }
 
   .stream_chat {
-    display: table-cell;
-    width: 20%;
+    width: 19%;
+    height: 100%;
   }
 }
 
