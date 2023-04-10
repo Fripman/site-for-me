@@ -19,8 +19,6 @@
     include 'header.php';
     ?>
 
-    <div class="stream">
-
 
 
     </div>
