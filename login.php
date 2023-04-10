@@ -17,28 +17,31 @@
     <?php
     include 'header.php';
     ?>
-
-    <main>
+    <div class="login">
         <div class="login-box">
             <h2>Login</h2>
-            <form>
+            <form action="/api/v1/authentification" method="post">
                 <div class="user-box">
-                    <input type="text" name="" required="">
-                    <label>Username</label>
+                    <input id="username" type="text" name="username" required="">
+                    <label for="username">Username</label>
                 </div>
                 <div class="user-box">
-                    <input type="password" name="" required="">
-                    <label>Password</label>
+                    <input id="password" type="password" name="password" required="">
+                    <label for="password">Password</label>
                 </div>
-                <a href="#">
-                    Submit
-                </a>
+                <label for="rememberMe" class="remember-me">
+                    <input id="rememberMe" type="checkbox" name="rememberMe">
+                    Se souvenir de moi
+                </label>
+                <button type="submit">
+                    Login
+                </button>
             </form>
         </div>
-    </main>
-    <?php
-    include 'footer.php';
-    ?>
+    </div>
+        <?php
+        include 'footer.php';
+        ?>
 
 </body>
 

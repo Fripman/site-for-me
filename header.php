@@ -4,9 +4,9 @@
             <ul>
                 <a href="#"><img src="loggo_tansparent.png" alt="logo" class="logo" width="50px" height="50px"></a>
                 <li><a href="#">Accueil</a></li>
-                <li><a href="#">Stream</a></li>
-                <li><a href="#">Mon parcours</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="stream.php">Stream</a></li>
+                <li><a href="parcours.php">Mon parcours</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>
         <div class="nav_droite">
