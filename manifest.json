@@ -1,0 +1,17 @@
+{
+    "name": "Fripman",
+    "short_name": "Fripman",
+    "description": "Site de Fripman",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2196f3",
+    "icons": [
+      {
+        "src": "/loggo_tansparent.png",
+        "sizes": "1325x1325",
+        "type": "image/png"
+      }
+    ]
+  }
+  

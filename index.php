@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style_header.css">
     <link rel="stylesheet" href="style_body.css">
     <link rel="stylesheet" href="style_footer.css">
+    <link rel="manifest" href="/manifest.json">
     <title>Fripman</title>
     <link rel="icon" href="loggo_tansparent.png">
 </head>
