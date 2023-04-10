@@ -2,7 +2,7 @@
     "name": "Fripman",
     "short_name": "Fripman",
     "description": "Site de Fripman",
-    "start_url": "/index.html",
+    "start_url": "/index.php",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#2196f3",
