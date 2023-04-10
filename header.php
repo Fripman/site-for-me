@@ -3,7 +3,7 @@
         <div class="nav_gauche">
             <ul>
                 <a href="Accueil.php"><img src="loggo_tansparent.png" alt="logo" class="logo" width="50px" height="50px"></a>
-                <li><a href="#">Accueil</a></li>
+                <li><a href="Accueil.php">Accueil</a></li>
                 <li><a href="stream.php">Stream</a></li>
                 <li><a href="parcours.php">Mon parcours</a></li>
                 <li><a href="contact.php">Contact</a></li>
