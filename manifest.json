@@ -8,8 +8,8 @@
     "theme_color": "#2196f3",
     "icons": [
       {
-        "src": "/loggo_tansparent.png",
-        "sizes": "1325x1325",
+        "src": "/logo_500.png",
+        "sizes": "500x500",
         "type": "image/png"
       }
     ]
