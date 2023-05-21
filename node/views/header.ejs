@@ -1,0 +1,41 @@
+<header>
+    <nav>
+        <div class="nav_gauche">
+            <ul>
+                <a href="Accueil.php"><img src="/loggo_tansparent.png" alt="logo" class="logo" width="50px"
+                        height="50px"></a>
+                <li><a href="Accueil.php">Accueil</a></li>
+                <li><a href="/stream">Stream</a></li>
+                <li><a href="parcours.php">Mon parcours</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav_droite">
+            <div id="profile">
+
+                <% if (typeof user !== 'undefined' && user !== null) { %>
+                    <p><%= user.username %></p>
+                <% } %>
+                  
+                
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6l1.41-1.41z" />
+                </svg>
+                <div id="dropdown-menu">
+
+                    <% if (!session.loggedIn) { %>
+                        <a href="/login">Se connecter</a>
+                        <a href="/register">S'inscrire</a>
+                    <% } %>
+
+                    <% if (session.loggedIn) { %>
+                        <a href="/profile">Mon compte</a>
+                        <a href="/logout">Déconnexion</a> 
+                    <% } %>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <script src="/profile.js"></script>
+</header>

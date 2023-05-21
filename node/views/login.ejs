@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/login.css">
+    <title>Fripman</title>
+    <link rel="icon" href="loggo_tansparent.png">
+</head>
+
+<body>
+    <% include('header') %>
+    <% if (messages.error) { %>
+        <div class="alert alert-danger">
+          <%= messages.error %>
+        </div>
+      <% } %>
+      <% if (messages.success) { %>
+        <div class="alert alert-success">
+          <%= messages.success %>
+        </div>
+      <% } %>
+      
+    <div class="login">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <div class="user-box">
+                    <input id="username" type="text" name="username" required="">
+                    <label for="username">Username</label>
+                </div>
+                <div class="user-box">
+                    <input id="password" type="password" name="password" required="">
+                    <label for="password">Password</label>
+                </div>
+                <label for="rememberMe" class="remember-me">
+                    <input id="rememberMe" type="checkbox" name="rememberMe">
+                    Se souvenir de moi
+                </label>
+                <button type="submit">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <% include('footer') %>
+</body>
+
+</html>

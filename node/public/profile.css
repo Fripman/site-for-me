@@ -1,0 +1,101 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.profile-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.profile-picture {
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+}
+
+.upload-form {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.upload-form input[type="file"] {
+    display: none;
+}
+
+.upload-form label {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-form label:hover {
+    background-color: #45a049;
+}
+
+.user-info {
+    margin-top: 2em;
+}
+
+.user-info label {
+    display: block;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.user-info input[type="text"],
+.user-info input[type="password"] {
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    margin-top: 0.5em;
+}
+
+.user-info button {
+    display: block;
+    margin-top: 2em;
+    width: 100%;
+    padding: 0.8em;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.user-info button:hover {
+    background-color: #45a049;
+}
