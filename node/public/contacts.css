@@ -13,8 +13,10 @@ h1 {
 
 table {
     width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     border-collapse: collapse;
+    overflow: auto;
 }
 
 th {
@@ -26,8 +28,39 @@ th {
 td {
     padding: 10px;
     border: 1px solid #ccc;
+    word-wrap: break-word;
+}
+
+.manage{
+    text-align: center;
+    align-self: center;
 }
 
 td:nth-child(even) {
     background-color: #e8e8e8;
+}
+
+td:nth-child(3) {
+    white-space: pre-wrap;
+}
+
+/* Styles for pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pagination a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.pagination a:hover {
+    color: #0056b3;
+}
+
+.pagination span {
+    margin: 0 10px;
 }

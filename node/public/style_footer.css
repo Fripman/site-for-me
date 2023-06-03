@@ -1,15 +1,16 @@
 footer {
-  background-color: #2196F3 ;
+  background-color: #2B2D42 ;
   color: #fff;
   text-align: left;
   padding: 10px 100px;
+  fill: #fff;
 }
 footer nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0 10px;
-  align-items: center;
+  align-items: start;
 
 }
 

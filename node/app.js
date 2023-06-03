@@ -9,6 +9,7 @@ const formidable = require('formidable');
 const cloudinary = require('cloudinary').v2;
 const bcrypt = require('bcrypt');
 const upload = multer({ dest: 'public/uploads/' });
+const axios = require('axios');
 
 
 mongoose.connect('mongodb://127.0.0.1/perso');
@@ -170,10 +171,10 @@ app.post('/profile/update', upload.single('profilePicture'), async (req, res) =>
       user.firstName = req.body.firstName;
       user.lastName = req.body.lastName;
       user.username = req.body.username;
-      
+
       // Handle password updates
-      if(req.body.password && req.body.password.trim() !== ''){
-         user.password = req.body.password; // make sure to hash the password before saving
+      if (req.body.password && req.body.password.trim() !== '') {
+        user.password = req.body.password; // make sure to hash the password before saving
       }
 
       // Save the updated user to the database
@@ -209,13 +210,57 @@ app.post('/contact', (req, res) => {
 app.get('/contact', async (req, res) => {
   const user = await User.findById(req.session.userId);
   if (user && user.role === 'admin') {
-    Contact.find()
-      .then(contact => res.render('contacts', { user, contact })) // fusionnez user et contact en un seul objet
-      .catch(err => res.status(400).json('Error: ' + err));
+    let page = req.query.page || 1; // L'utilisateur peut spécifier une page, sinon on utilise la première page par défaut.
+    let limit = 10; // Le nombre de contacts à retourner par page.
+    let offset = (page - 1) * limit; // Le nombre de contacts à sauter avant de commencer à retourner des résultats.
+
+    try {
+      let contacts = await Contact.find().skip(offset).limit(limit); // Récupérez les contacts de la base de données, en sautant et en limitant comme spécifié.
+      let totalContacts = await Contact.countDocuments(); // Récupérez le nombre total de contacts pour la pagination.
+
+      res.render('contacts', {
+        contacts: contacts,
+        currentPage: page,
+        totalPages: Math.ceil(totalContacts / limit) // Calculez le nombre total de pages.
+      });
+    } catch (err) {
+      console.error(err);
+      res.status(500).send("An error occurred while retrieving contacts.");
+    }
   } else {
     res.render('contact_form', { user });
   }
 });
+
+app.get('/contacts/:id', async (req, res) => {
+  try {
+    let contact = await Contact.findById(req.params.id); // Récupérez le contact spécifique à partir de l'ID dans l'URL.
+
+    res.render('re_contact', { contact: contact }); // Affichez le template 'contact' et passez le contact à afficher.
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("An error occurred while retrieving the contact.");
+  }
+});
+
+app.post('/contacts/:id/reponse', async (req, res) => {
+  try {
+    let contact = await Contact.findById(req.params.id); // Récupérez le contact spécifique à partir de l'ID dans l'URL.
+
+    // Ici, vous pourriez ajouter du code pour envoyer la réponse à l'email du contact.
+
+    res.redirect('/contacts'); // Redirigez vers la page des contacts.
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("An error occurred while sending the response.");
+  }
+});
+
+
+
+///////////////////////////-API-////////////////////////////////////
+
+
 
 
 app.listen(3000, () => console.log('Listening on port 3000'));

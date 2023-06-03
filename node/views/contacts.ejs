@@ -13,22 +13,38 @@
 </head>
 
 <body>
-    <%- include('header') %>
-    <h1>Contact Requests</h1>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Message</th>
-      </tr>
-      <% contact.forEach(contact => { %>
-      <tr>
-        <td><%= contact.name %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.message %></td>
-      </tr>
-      <% }) %>
-    </table>
-    <%- include('footer') %>
-  </body>
+  <%- include('header') %>
+  <h1>Contact Requests</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Object</th>
+      <th>Gerer</th>
+    </tr>
+    <% contacts.forEach(contact => { %>
+    <tr>
+      <td><%= contact.name %></td>
+      <td><%= contact.email %></td>
+      <td><%= contact.object %></td>
+      <td><button class="manage"><a href="/contacts/<%= contact.id %>">Contacter</a></button></td>
+    </tr>
+    <% }) %>
+  </table>
+
+  <div class="pagination">
+    <% if (currentPage > 1) { %>
+      <a href="/contacts?page=<%= currentPage - 1 %>">Previous</a>
+    <% } %>
+    <span>Page <%= currentPage %> of <%= totalPages %></span>
+    <% if (currentPage < totalPages) { %>
+      <a href="/contacts?page=<%= currentPage + 1 %>">Next</a>
+    <% } %>
+  </div>
+
+  <%- include('footer') %>
+</body>
+
+
+
   

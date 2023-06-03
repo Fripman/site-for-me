@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style_header.css">
+    <link rel="stylesheet" href="/re_contact.css">
+    <link rel="stylesheet" href="/style_footer.css">
+    <title>Fripman</title>
+    <link rel="icon" href="/loggo_tansparent.png">
+</head>
+
+<body>
+    <%- include('header') %>
+
+    <h1>Contact Request from <%= contact.name %></h1>
+
+    <p>Email: <%= contact.email %></p>
+    <p>Message:<br><%= contact.message %></p>
+
+    <h2>Respond to this Contact Request</h2>
+
+    <form action="/contacts/:id/respond" method="POST">
+        <textarea name="response" rows="5" cols="50" placeholder="Write your response here..."></textarea><br>
+        <input type="submit" value="Send Response">
+    </form>
+
+    <%- include('footer') %>
+</body>
