@@ -22,6 +22,7 @@ header {
   height: 40px;
   padding: 0px 10px;
   border-radius: 50%;
+  fill: white;
 }
 
 nav {
@@ -79,9 +80,6 @@ nav li a:hover {
   transition: all 0.1s ease-in-out;
 }
 
-#profile.active svg {
-  transform: rotate(-180deg);
-}
 
 #dropdown-menu {
   display: none;

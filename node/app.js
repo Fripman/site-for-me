@@ -60,11 +60,10 @@ app.get('/stream', async (req, res) => {
     if (user) {
       res.render('stream', { user });
     } else {
-      res.status(400).send('User not found');
+      res.render('stream');
     }
   } else {
-    res.status(403).send('Not logged in');
-    res.render('login');
+    res.render('stream');
   }
 
 })
