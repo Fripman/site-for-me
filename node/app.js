@@ -218,6 +218,7 @@ app.get('/contact', async (req, res) => {
       let totalContacts = await Contact.countDocuments(); // Récupérez le nombre total de contacts pour la pagination.
 
       res.render('contacts', {
+        user: user,
         contacts: contacts,
         currentPage: page,
         totalPages: Math.ceil(totalContacts / limit) // Calculez le nombre total de pages.
