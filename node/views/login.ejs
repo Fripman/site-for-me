@@ -11,18 +11,7 @@
 </head>
 
 <body>
-    <% include('header') %>
-    <% if (messages.error) { %>
-        <div class="alert alert-danger">
-          <%= messages.error %>
-        </div>
-      <% } %>
-      <% if (messages.success) { %>
-        <div class="alert alert-success">
-          <%= messages.success %>
-        </div>
-      <% } %>
-      
+    <% include('header') %>  
     <div class="login">
         <div class="login-box">
             <h2>Login</h2>
@@ -39,6 +28,16 @@
                     <input id="rememberMe" type="checkbox" name="rememberMe">
                     Se souvenir de moi
                 </label>
+                <% if (messages.error) { %>
+                    <div class="alert-error">
+                      <%= messages.error %>
+                    </div>
+                  <% } %>
+                  <% if (messages.success) { %>
+                    <div class="alert-success">
+                      <%= messages.success %>
+                    </div>
+                  <% } %>
                 <button type="submit">
                     Login
                 </button>

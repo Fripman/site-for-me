@@ -23,6 +23,10 @@ h1, h2 {
     text-align: center;
 }
 
+.profile-picture :hover {
+    
+}
+
 .profile-picture img {
     width: 150px;
     height: 150px;

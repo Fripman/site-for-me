@@ -9,33 +9,44 @@
   <link rel="stylesheet" href="/style_header.css">
   <link rel="stylesheet" href="/style_footer.css">
   <title>Profile</title>
+  <script>
+    function triggerClick() {
+      document.getElementById('profilePicInput').click();
+    }
+  </script>
 </head>
 
 <body>
   <%- include('header') %>
     <div class="profile-container">
       <form action="/profile/update" method="post" enctype="multipart/form-data">
-      <h1>Your Profile</h1>
-      <div class="profile-picture">
-        <img src="<%= user.profilePicture %>" alt="Profile Picture">
-      </div>
-      <div class="upload-form">
-        <input type="file" name="profilePicture" accept="image/*">
-      </div>
-      <div class="user-info">
-        <h2>Your Information</h2>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" value="<%= user.surname %>">
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" value="<%= user.name %>">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" value="<%= user.username %>">
-        <label for="password">New Password:</label>
-        <input type="password" id="password" name="password">
-        <button type="submit">Update</button>
-
-
-      </div>
+        <h1>Your Profile</h1>
+        <div class="profile-picture" onclick="triggerClick()">
+          <img src="<%= user.profilePicture %>" alt="Profile Picture">
+        </div>
+        <div class="upload-form">
+          <input type="file" id="profilePicInput" name="profilePicture" accept="image/*" style="display: none;">
+        </div>
+        <div class="user-info">
+          <h2>Your Information</h2>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" value="<%= user.surname %>">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" value="<%= user.name %>">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" value="<%= user.username %>">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="<%= user.email %>">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" value="<%= user.dob %>">
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="bio"><%= user.bio %></textarea>
+          <label for="password">New Password:</label>
+          <input type="password" id="password" name="password">
+          <label for="passwordConfirm">Confirm New Password:</label>
+          <input type="password" id="passwordConfirm" name="passwordConfirm">
+          <button type="submit">Update</button>
+        </div>
       </form>
     </div>
     <%- include('footer') %>
